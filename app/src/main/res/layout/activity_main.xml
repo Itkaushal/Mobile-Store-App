@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Register here"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/purple_500"
+        android:textSize="25sp"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:textStyle="normal"
+            android:padding="10dp"
+            android:id="@+id/et_email"
+            android:inputType="textEmailAddress"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:hint="Enter Email:"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:textStyle="normal"
+            android:padding="10dp"
+            android:id="@+id/et_password"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:hint="Enter Paswrd:"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:onClick="register"
+        android:layout_gravity="center"
+        android:text="Submit"
+        android:textStyle="normal"
+        app:cornerRadius="5dp"
+        android:id="@+id/btn_submit"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="👉Login"
+        android:id="@+id/tv_login"
+        android:onClick="logingo"
+        android:textStyle="bold"
+       android:gravity="end"
+       android:layout_marginRight="100dp"
+        android:textColor="@color/purple_500"
+        android:textSize="15sp"/>
+
+</LinearLayout>
