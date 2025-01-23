@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePage">
+    tools:context=".MainLayout.HomePage">
 
     <FrameLayout
         android:id="@+id/Main_fragment_container"
@@ -15,6 +15,8 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="wrap_content"
         android:id="@+id/bottomnav"
+        android:saveEnabled="true"
+        android:hapticFeedbackEnabled="true"
         android:layout_height="wrap_content"
         app:menu="@menu/bottomnavigation"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"

@@ -4,107 +4,102 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/background_gradient"
     android:layout_height="match_parent"
     tools:context=".fragment_class.Fragment_Profile">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+      android:orientation="vertical">
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+         app:cardCornerRadius="10dp"
+          android:background="@drawable/logoutshape"
+          android:outlineAmbientShadowColor="@color/white"
+          android:outlineSpotShadowColor="@color/white"
+          android:layout_margin="20dp"
+         app:cardElevation="20dp">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+         android:orientation="vertical"
+         >
 
    <TextView
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:text="Profile"
-       android:gravity="center"
+       android:padding="10dp"
+       android:layout_marginTop="10dp"
        android:textSize="25sp"
        android:textStyle="bold"
-       android:layout_marginTop="50dp"
        android:textColor="@color/purple_500"/>
+   <de.hdodenhof.circleimageview.CircleImageView
+       android:layout_width="120dp"
+       android:layout_height="120dp"
+      android:id="@+id/img_profile"
+       android:src="@drawable/ic_launcher_background"
+       app:civ_border_width="1sp"
+       app:civ_border_color="@color/purple_500"
+      android:layout_gravity="center"
+      android:layout_margin="10dp"/>
 
    <com.google.android.material.textfield.TextInputLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-      android:layout_marginTop="20dp"
+      android:layout_marginTop="10dp"
       android:padding="10dp">
       <com.google.android.material.textfield.TextInputEditText
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:inputType="textPersonName"
-         android:textSize="15sp"
+          android:focusable="false"
+         android:textSize="16sp"
+          android:textColor="#7B1FA2"
           android:padding="10dp"
           android:gravity="start"
          android:hint="Name:"
-         android:id="@+id/tv_name_upd"/>
+         android:id="@+id/tv_name_profile"/>
    </com.google.android.material.textfield.TextInputLayout>
 
    <com.google.android.material.textfield.TextInputLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-       android:layout_marginTop="10dp"
+       android:layout_marginTop="5dp"
        android:padding="10dp">
       <com.google.android.material.textfield.TextInputEditText
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:textSize="15sp"
+          android:textSize="16sp"
           android:padding="10dp"
+          android:focusable="false"
           android:gravity="start"
+          android:textColor="#7B1FA2"
           android:inputType="textEmailAddress"
           android:hint="Email:"
-          android:id="@+id/tv_email_upd"/>
+          android:id="@+id/tv_email_profile"/>
    </com.google.android.material.textfield.TextInputLayout>
-
-   <com.google.android.material.textfield.TextInputLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-       android:layout_marginTop="10dp"
-       android:padding="10dp">
-      <com.google.android.material.textfield.TextInputEditText
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:inputType="textPassword"
-          android:textSize="15sp"
-          android:padding="10dp"
-          android:gravity="start"
-          android:hint="Mobile:"
-          android:id="@+id/tv_mobile_upd"/>
-   </com.google.android.material.textfield.TextInputLayout>
-
-   <com.google.android.material.textfield.TextInputLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-       android:layout_marginTop="10dp"
-       android:padding="10dp">
-      <com.google.android.material.textfield.TextInputEditText
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:inputType="textPassword"
-          android:textSize="15sp"
-          android:padding="10dp"
-          android:gravity="start"
-          android:hint="Password:"
-          android:id="@+id/tv_paswd_upd"/>
-   </com.google.android.material.textfield.TextInputLayout>
-
-   <com.google.android.material.button.MaterialButton
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-      android:layout_gravity="center"
-      app:cornerRadius="5dp"
-      android:text="Update Profile"
-      android:textSize="15sp"
-      android:layout_marginTop="10dp"
-      android:id="@+id/btn_update_profile"/>
 
    <com.google.android.material.textview.MaterialTextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-      android:textSize="15sp"
-      android:layout_marginTop="5dp"
-      android:text="👉Log Out"
-       android:onClick="logout"
-      android:textColor="@color/purple_500"
-      android:textStyle="bold"
-      android:layout_gravity="end"
-      android:layout_marginEnd="50dp"/>
+       android:layout_width="150dp"
+       android:layout_height="35dp"
+      android:layout_gravity="center"
+      android:text="LogOut"
+       android:id="@+id/btnGoogle_lgout"
+       android:textStyle="bold"
+       android:layout_marginBottom="10dp"
+      android:textSize="18sp"
+      android:textColor="@color/black"
+      android:background="@drawable/logoutshape"
+       android:layout_marginTop="30dp"
+      android:gravity="center"/>
+      </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+   </LinearLayout>
 
 </LinearLayout>

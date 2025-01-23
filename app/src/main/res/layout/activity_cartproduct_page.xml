@@ -1,103 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="10dp"
-    tools:context=".RoomDatabase.cartproduct_page">
+    android:orientation="vertical"
+    android:background="#F1F8F7"
+    tools:context=".MainLayout.cartproduct_page"
+    android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/et_pid_cart"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="Enter Product Id"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+           android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            app:cardElevation="25dp"
+            android:outlineAmbientShadowColor="@color/white"
+            android:outlineSpotShadowColor="@color/white"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="15dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/pimg"
+        android:layout_width="250dp"
         android:padding="10dp"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/et_pname_cart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Enter Product Name "
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:padding="10dp"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_pid_cart" />
-
-    <EditText
-        android:id="@+id/et_pprice_cart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Enter Product Price"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_pname_cart" />
-
-    <EditText
-        android:id="@+id/et_pquat_cart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Enter Product Quantity"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_pprice_cart" />
-
-    <Button
-        android:id="@+id/btn_saveroom_cart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Save To Room"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_pquat_cart" />
-
-    <Button
-        android:id="@+id/btn_checkcart_cart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Check Cart"
-        android:onClick="checkcart"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_saveroom_cart" />
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
 
     <TextView
-        android:id="@+id/tv_lbl"
-        android:layout_width="wrap_content"
+        android:id="@+id/pname"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:textColor="#FA4F1B"
+        android:background="@drawable/shapelayout"
+        android:backgroundTint="#FAF6F6"
+        android:gravity="center"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
+        android:text="pname"
+        android:padding="10dp"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_checkcart_cart" />
+        android:textStyle="bold"/>
 
+    <TextView
+        android:id="@+id/pprice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:backgroundTint="#FAF6F6"
+        android:layout_gravity="center"
+        android:textColor="@color/purple_200"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/shapelayout"
+        android:text="price"
+        android:textSize="20sp"
+        android:textStyle="normal"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/pdesc"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="description"
+        android:backgroundTint="#FAF6F6"
+        android:background="@drawable/shapelayout"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textStyle="normal"
+        android:layout_gravity="center"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:weightSum="2"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="140dp"
+        android:id="@+id/btn_addcart"
+        android:onClick="addcartbtn"
+        android:layout_weight="1"
+        app:cornerRadius="5dp"
+        android:layout_height="wrap_content"
+        android:text="Add Cart"/>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="140dp"
+        android:id="@+id/btn_buy"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        app:cornerRadius="5dp"
+        android:onClick="buynow"
+        android:layout_height="wrap_content"
+        android:text="Buy Now"/>
+
+</LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</LinearLayout>

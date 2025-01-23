@@ -4,25 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background_gradient"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainLayout.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="20dp"
+            android:layout_gravity="center"
+            android:outlineSpotShadowColor="@color/white"
+            android:outlineAmbientShadowColor="@color/white"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Register here"
+        android:layout_marginTop="10dp"
+        android:text="User Sign Up"
         android:textStyle="bold"
         android:gravity="center"
         android:textColor="@color/purple_500"
         android:textSize="25sp"/>
-
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:textStyle="normal"
+            android:padding="10dp"
+            android:id="@+id/et_name"
+            android:inputType="textPersonName"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:hint="Enter Your Name:"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:padding="10dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -37,11 +74,32 @@
             android:textSize="15sp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:focusableInTouchMode="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:textStyle="normal"
+                    android:padding="10dp"
+                    android:id="@+id/et_userid"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:hint="Enter UserId:"
+                    android:textColorHint="@color/black"
+                    android:textSize="15sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:padding="10dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
+        app:passwordToggleEnabled="true"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -56,12 +114,111 @@
             android:textSize="15sp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:textStyle="normal"
+            android:padding="10dp"
+            android:id="@+id/et_mobile"
+            android:inputType="phone"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:hint="Enter Mobile:"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:textStyle="normal"
+            android:padding="10dp"
+            android:id="@+id/et_pincode"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:hint="Enter PinCode:"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:textStyle="normal"
+            android:padding="10dp"
+            android:id="@+id/et_state"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:hint="Enter Your state:"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:textStyle="normal"
+            android:padding="10dp"
+            android:id="@+id/et_houseno"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:hint="Enter Your House no.,Building Name:"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:textStyle="normal"
+            android:padding="10dp"
+            android:id="@+id/et_roadname"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:hint="Enter Road Name,Area,Colony:"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
         android:textSize="20sp"
-        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@drawable/logoutshape"
+        android:textColor="@color/black"
         android:onClick="register"
         android:layout_gravity="center"
         android:text="Submit"
@@ -81,5 +238,7 @@
        android:layout_marginRight="100dp"
         android:textColor="@color/purple_500"
         android:textSize="15sp"/>
-
+        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </ScrollView>
 </LinearLayout>

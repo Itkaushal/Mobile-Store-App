@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'com.google.gms.google-services'
-
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 
 }
 
@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.datasentapi"
-        minSdk 24
+        minSdk 26
         targetSdk 34
         versionCode 1
         versionName "1.0"
@@ -35,29 +35,46 @@ android {
 }
 
 dependencies {
+
+   //Image slider ke liye and circle image ke liye
+
     implementation 'com.github.denzcoskun:ImageSlideshow:0.1.2'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //Image ko online get karne ke liye
     implementation 'com.squareup.picasso:picasso:2.71828'
-    implementation 'com.github.bumptech.glide:glide:4.12.0'
-    implementation 'com.google.firebase:firebase-messaging:23.0.3'
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    implementation 'com.google.firebase:firebase-database:21.0.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
 
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.10.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
 
-    implementation 'com.google.firebase:firebase-database:20.3.0'
-    implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
+    //Firebase related dependencies
+    implementation 'com.google.android.gms:play-services-auth:21.3.0'
+    implementation 'com.google.firebase:firebase-database:21.0.0'
+    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
     implementation("com.google.firebase:firebase-analytics")
-    implementation 'com.google.firebase:firebase-auth:22.2.0'
+    implementation 'com.google.firebase:firebase-auth:23.1.0'
     implementation 'com.firebaseui:firebase-ui-database:7.1.1'
 
 
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 
-    // room Database dependency...
-    implementation 'androidx.room:room-runtime:2.2.5'
-    annotationProcessor 'androidx.room:room-compiler:2.2.5'
+    //Payment Integration Razorpay
+    implementation 'com.razorpay:checkout:1.6.33'
+
+    //lottie animation...
+    implementation 'com.airbnb.android:lottie:6.2.0'
+
+    //Location map sdk ke liye
+    implementation('com.google.android.gms:play-services-maps:19.0.0')
+    implementation('com.google.android.gms:play-services-location:21.3.0')
+
+    //Runtime permission manage karne ke liye
+    implementation('com.karumi:dexter:6.2.3')
+
 }

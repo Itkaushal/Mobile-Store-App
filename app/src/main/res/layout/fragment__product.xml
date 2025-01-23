@@ -3,22 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background_gradient"
     android:layout_height="match_parent"
     tools:context=".fragment_class.Fragment_Products">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:textSize="25sp"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:textSize="20sp"
         android:text="@string/trending_deals"
         android:textStyle="bold"
         android:gravity="center_vertical"
         android:layout_marginStart="10dp"
-        android:textColor="@color/purple_500"/>
+        android:textColor="@color/black"/>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:id="@+id/recycler_view_1"
-        android:layout_height="match_parent"/>
+        android:layout_margin="5dp"
+        android:paddingBottom="50dp"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

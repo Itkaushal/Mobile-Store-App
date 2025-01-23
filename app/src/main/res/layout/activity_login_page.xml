@@ -4,41 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background_gradient"
+    android:gravity="center"
     android:layout_height="match_parent"
-    tools:context=".LoginPage">
+    tools:context=".MainLayout.LoginPage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:outlineAmbientShadowColor="@color/white"
+            android:outlineSpotShadowColor="@color/white"
+            app:cardElevation="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login here"
         android:textSize="25sp"
+        android:includeFontPadding="true"
+        android:padding="5dp"
         android:textStyle="bold"
         android:textColor="@color/purple_500"
-        android:gravity="center"
         android:layout_marginTop="100dp"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_marginTop="50dp"
-        >
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:id="@+id/et_email_lgn"
-            android:hint="Enter Email"
-            android:inputType="textEmailAddress"
-            android:textSize="15sp"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_email_lgn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Email"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -46,36 +66,55 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:hint="Enter Password"
-            android:textSize="15sp"
+            android:textSize="16sp"
             android:padding="10dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="170dp"
+        android:layout_height="40dp"
         android:gravity="center"
         android:text="Login"
+        android:background="@drawable/logoutshape"
         android:onClick="loginsignin"
         android:id="@+id/btn_login"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        app:cornerRadius="20dp"
-        android:elevation="10dp"
-        android:shadowColor="@color/white"/>
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        app:cornerRadius="5dp"
+        android:elevation="10dp"/>
 
     <TextView
+        android:id="@+id/tv_regster"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:text="Register👈"
-        android:id="@+id/tv_regster"
-        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="100dp"
         android:gravity="end"
         android:onClick="registergo"
-        android:layout_marginRight="100dp"
+        android:text="Register👈"
         android:textColor="@color/purple_500"
-        android:textSize="15sp"/>
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/googlebtn"
+            android:layout_width="170dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="10dp"/>
+    </LinearLayout>
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
 </LinearLayout>

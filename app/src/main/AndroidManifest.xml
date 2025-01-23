@@ -1,52 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="Mobile Store"
+        android:icon="@drawable/applogo"
+        android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.DatasentApi"
-        tools:targetApi="31" >
+        tools:targetApi="31">
         <activity
-            android:name=".Payment"
+            android:name=".MainLayout.NothingProductActivity"
             android:exported="false" />
         <activity
-            android:name=".RoomDatabase.CartCheckout"
+            android:name=".MainLayout.OppoProductActivity"
             android:exported="false" />
         <activity
-            android:name=".RoomDatabase.cartproduct_page"
+            android:name=".MainLayout.AppleProductActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginPage"
+            android:name=".MainLayout.OnePlusProductActivity"
             android:exported="false" />
         <activity
-            android:name=".HomePage"
+            android:name=".MainLayout.VivoProductActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true" >
+            android:name=".MainLayout.GoogleMap"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC8-SL-djeAPVJZGKKqBRvLhKCRBY9tW84" />
+
+        <activity
+            android:name=".ModalClass.OrderSuccess"
+            android:exported="false" />
+        <activity
+            android:name=".ProductItemListLayout.ProductItemFourList"
+            android:exported="false" />
+        <activity
+            android:name=".ProductItemListLayout.ProductItemThreeList"
+            android:exported="false" />
+        <activity
+            android:name=".ProductItemListLayout.ProductItemTwoList"
+            android:exported="false" />
+        <activity
+            android:name=".ProductItemListLayout.ProductItemOneList"
+            android:exported="false" />
+        <activity
+            android:name=".MainLayout.HomePage"
+            android:exported="false" />
+        <activity
+            android:name=".MainLayout.Payment"
+            android:exported="false" />
+        <activity
+            android:name=".MainLayout.cartproduct_page"
+            android:exported="false" />
+        <activity
+            android:name=".MainLayout.LoginPage"
+            android:exported="false" />
+        <activity
+            android:name=".MainLayout.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainLayout.SplashScreen"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <service
-            android:name=".MyFirebaseMessagingService"
-            android:exported="false" >
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
     </application>
 
 </manifest>
