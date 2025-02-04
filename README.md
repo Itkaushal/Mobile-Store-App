@@ -1,4 +1,4 @@
-📱 Mobile Store App
+![productdetails5 40 07](https://github.com/user-attachments/assets/c4b6af45-5965-4b7d-a31c-696c51fe3cce)📱 Mobile Store App
 future modification 👇 until this app is on android java xml firebase material3 google auth .
 🚀 Mobile Store App is an Android application built using Kotlin + Jetpack Compose that provides a seamless shopping experience for mobile phones. This app features a clean UI, product listing, detailed views, and cart functionality.
 
@@ -68,4 +68,11 @@ Follow for updates and more awesome projects! 🚀
 #️⃣ #AndroidDev #Kotlin #JetpackCompose #MobileStoreApp #MVVM #Firebase #Retrofit #Coil #MaterialDesign3
 📸 Screenshots- Home Screen	Product Listing	Product Details	Cart Page
 📱 ✅	📱 🔍	📱 ℹ️	🛒 💳
-
+![home](https://github.com/user-attachments/assets/12572898-c868-45c2-acb9-221f63cb14a6)
+![allproducts2](https://github.com/user-attachments/assets/69a8897c-b7c6-42e5-b5c2-8dc0aa7a1a59)
+![allproducts](https://github.com/user-attachments/assets/9f35fb73-7d06-4309-a825-17a892012dd7)
+![productlist](https://github.com/user-attachments/assets/3ad54796-16c8-4711-aaad-b6f9f6522002)
+![productlist2](https://github.com/user-attachments/assets/cfe53a0e-8ba7-43db-9bef-b998026ed9d6)
+![productdetails5 40 07](https://github.com/user-attachments/assets/d1c7570d-2915-4b29-90dbfd3541143d87)
+![cart](https://github.com/user-attachments/assets/4e4935c8-9eda-40a4-9964-d3a8282dbc4b)
+![profile 40 06](https://github.com/user-attachments/assets/f6ee7e4a-51ce-4ec1-bd26-9bc9cacf1f30)
